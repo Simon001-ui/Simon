@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>John.AI - Votre Assistant IA</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="icon-192.png" type="image/png">
+</head>
+<body>
+  <header>
+    <h1>John.AI</h1>
+    <p class="welcome">Bonjour, comment puis-je vous aider ?</p>
+  </header>
+
+  <main>
+    <form id="ask-form">
+      <input type="text" id="question" placeholder="Posez votre question..." required>
+      <button type="submit">Envoyer</button>
+    </form>
+
+    <div id="response">
+      <span class="dots">
+        <span>.</span><span>.</span><span>.</span>
+      </span>
+    </div>
+  </main>
+
+  <nav>
+    <a href="historique.html">Historique</a>
+    <a href="apropos.html">À Propos</a>
+    <a href="politique.html">Politique</a>
+    <a href="contact.html">Contact</a>
+    <a href="partager.html">Partager</a>
+  </nav>
+
+  <script src="script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</body>
+</html>
